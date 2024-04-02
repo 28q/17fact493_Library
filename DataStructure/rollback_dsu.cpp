@@ -1,3 +1,13 @@
+/*
+基本的な関数はdsuと同じ
+
+undo() 1個前の操作を取り消す
+snapshot() dsuの状態を保存する
+rollback(int state = -1) 
+  state = -1の時snapshot()で保存した状態に戻る
+  state >= 0の時mergeがstate回呼ばれた時の状態に戻る
+get_state() 現在のmergeが呼ばれた回数を返す
+*/
 struct rollback_dsu{
   rollback_dsu():n(0), cnt(0), inner_snap(0){}
   explicit rollback_dsu(int _n):n(_n), cnt(_n), inner_snap(0), p(_n, -1){}
