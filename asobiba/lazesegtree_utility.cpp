@@ -7,6 +7,7 @@ seg.chmin(l, r, x):
 i ∈ [l, r) に対して ai = min(ai, x)
 seg.chmax(l, r, x):
 i ∈ [l, r) に対して ai = max(ai, x)
+また、chminとchmaxをすることでi ∈ [l, r) に対して ai = x とすることも可能
 seg.add(l, r, x):
 i ∈ [l, r) に対して ai += x
 seg.get(i):
