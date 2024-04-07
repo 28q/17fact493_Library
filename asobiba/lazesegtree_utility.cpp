@@ -317,8 +317,3 @@ namespace utility{
     vector<F> lazy;
   };
 };
-      l--;
-      cout << seg.max_right_max(l, x) + 1 << endl;
-    }
-  }
-}
