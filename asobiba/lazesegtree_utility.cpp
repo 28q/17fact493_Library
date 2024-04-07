@@ -31,7 +31,7 @@ seg.min_left_min(r, x):
 l <= rであって a[l-1] <= xであるような最大のl(存在しなければ0)を返す
 seg.min_left_sum_lq(r, x):
 l <= rであって a[l-1] + a[l] ... a[r-1] <= xであるような最大のl(存在しなければ0)を返す(累積和が単調じゃないと壊れる)
-seg.min_left_sum_lq(r, x):
+seg.min_left_sum_gq(r, x):
 l <= rであって a[l-1] + a[l] ... a[r-1] >= xであるような最大のl(存在しなければ0)を返す(累積和が単調じゃないと壊れる)
 */
 namespace utility{
