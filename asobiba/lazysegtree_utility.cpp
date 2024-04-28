@@ -1,5 +1,5 @@
 /*
-utility::lazesegtree_utility seg(n):
+utility::lazysegtree_utility seg(n):
 すべて0で初期化されたn要素のsegtree beatsを宣言
 seg.set(i, x):
 ai = x
