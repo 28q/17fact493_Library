@@ -91,7 +91,7 @@ namespace utility{
     F id(){return F();}
     S mapping(F f, S x){
       if(x.sz == 0) return e();
-      if(x.lo == x.hi || f.lb == f.ub || f.lb >= x.hi || f.ub < x.lo){
+      if(x.lo == x.hi || f.lb == f.ub || f.lb >= x.hi || f.ub <= x.lo){
         return S(min(max(x.lo, f.lb), f.ub) + f.bias, x.sz);
       }
       if(x.lo2 == x.hi){
