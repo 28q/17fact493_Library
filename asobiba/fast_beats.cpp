@@ -1,3 +1,41 @@
+/*
+utility::lazysegtree_utility seg(n):
+すべて0で初期化されたn要素のsegtree beatsを宣言
+seg.set(i, x):
+ai = x
+seg.set(l, r, x):
+i ∈ [l, r) に対して ai = x
+seg.chmin(l, r, x):
+i ∈ [l, r) に対して ai = min(ai, x)
+seg.chmax(l, r, x):
+i ∈ [l, r) に対して ai = max(ai, x)
+seg.add(l, r, x):
+i ∈ [l, r) に対して ai += x
+seg.get(i):
+aiを返す
+seg.get_max(l, r):
+[l, r)の最大値を返す
+seg.get_min(l, r):
+[l, r)の最小値を返す
+seg.get_sum(l, r):
+[l, r)の総和を返す
+seg.max_right_max(l, x):
+l <= rであって a[r] >= xであるような最小のr(存在しなければn)を返す
+seg.max_right_min(l, x):
+l <= rであって a[r] <= xであるような最小のr(存在しなければn)を返す
+seg.max_right_sum_lq(l, x):
+l <= rであって a[l] + a[l+1] ... a[r] <= xであるような最小のr(存在しなければn)を返す(累積和が単調じゃないと壊れる)
+seg.max_right_sum_gq(l, x):
+l <= rであって a[l] + a[l+1] ... a[r] >= xであるような最小のr(存在しなければn)を返す(累積和が単調じゃないと壊れる)
+seg.min_left_max(r, x):
+l <= rであって a[l-1] >= xであるような最大のl(存在しなければ0)を返す
+seg.min_left_min(r, x):
+l <= rであって a[l-1] <= xであるような最大のl(存在しなければ0)を返す
+seg.min_left_sum_lq(r, x):
+l <= rであって a[l-1] + a[l] ... a[r-1] <= xであるような最大のl(存在しなければ0)を返す(累積和が単調じゃないと壊れる)
+seg.min_left_sum_gq(r, x):
+l <= rであって a[l-1] + a[l] ... a[r-1] >= xであるような最大のl(存在しなければ0)を返す(累積和が単調じゃないと壊れる)
+*/
 #pragma once
 #include <vector>
 #include <cassert>
